@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Example</title>
+  <!-- Lucide Icons -->
+   <!-- choose one -->
+    <!-- Font Awesome 6 Free CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+
+
+:root {
+    --backgroung-1: #040816;
+    --background-2: #122250;
+    --background-3: #1E3581;
+    --color-a: #FFFFFF;
+    --color-b: #000000;
+    --color-c: #007bff;
+    --color-d: #f5f5f5;
+    --color-e: #333333;
+    --color-f: #ccc;
+    --border-a: #0832B8;
+    --border-b: #0030FF86; 
+    --border-c: #1149FFF7;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+/* Navbar */
+nav {
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Kiri: profil + logo */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-c);
+}
+
+/* Menu kanan */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    a {
+       text-decoration: none;
+       color: #333;
+       display: flex;
+       align-items: center;
+       gap: 5px;
+       transition: color 0.3s;
+       &:hover {
+           color: #007bff;
+       }
+   }
+}
+
+/* Language select */
+.lang-select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+/* Section Biodata */
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    height: 90vh;
+    /* margin: 40px auto; */
+    padding: 20px;
+    /* background: #fff; */
+    border-radius: 10px;
+    /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */
+}
+
+.biodata {
+    max-width: 60%;
+     h2 {
+        margin-bottom: 10px;
+        color: var(--color-c);
+     }
+    p {
+        margin: 6px 0;
+        color: var(--color-d);
+    }
+}
+
+.foto-biodata {
+    width:  250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ccc;
+}
+.bioddata {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url(minecraft-night2.jpg) center/cover no-repeat;
+}
+
+.visi-misi {
+    /* height: 90vh; */
+    color: #fff;
+    justify-content: center;
+    display: flex;
+    text-align: left;
+
+    h2 {
+        text-align: center;       
+    }
+}
+
+.visi, .misi {
+    background: var(--background-2);
+    margin: 15px;
+    padding: 10px;
+    border: 2px solid var(--border-a);
+    border-radius: 10px;
+    max-width: 40%;
+    transition-duration: .5s;
+    &:hover {
+        transform: scale(1.1);
+
+    }
+}
+.hobby {
+    text-align: center;
+    display:grid ;
+    justify-content: center;
+    color: var(--color-d);
+    .root {
+        display: flex;
+    }
+}
+.card-hoby {
+    padding: 5px;
+    margin: 10px;
+    overflow: hidden;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid var(--border-b);
+    border-radius: 10px;
+}
+footer {
+    border-top: 3px solid var(--color-e);
+    padding: 20px;
+    background: #181818; 
+    color: var(--color-d);
+    height: 30vh;
+    text-align: center;
+    .link {
+        list-style: none;
+        /* padding: 0; */
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        a {
+            color: var(--color-d);
+            font-size: 34px;
+            transition: color 0.3s;
+            &:hover {
+                color: var(--color-c);
+            }
+        }
+    }
+}
+.Kata-Kata {
+    background: linear-gradient( var(--background-2), var(--backgroung-1));
+    color: var(--color-d);
+}
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+    <nav>
+    <!-- Kiri -->
+        <div class="nav-left">
+        <!-- Profile Image -->
+        <img src="nexdy.png" alt="Profile" class="profile-img">
+        <!-- Logo -->
+        <div class="logo">Nexdy Project</div>
+        </div>
+
+    <!-- Kanan -->
+        <div class="nav-right">
+            <a href="#biodata"> Biodata</a>
+            <a href="#visi-misi">visi-misi</a>
+            <a href="#project">Project</a>
+        </div>
+    </nav>
+<!-- pekenalan start -->
+<header class="bioddata" id="biodata" >
+        <section>
+        <div class="biodata">
+            <h2>Biodata</h2>
+            <p><strong>Nama:</strong> Febri Pratama</p>
+            <p><strong>Kelas:</strong> 11 RPL 1</p>
+            <p><strong>Tanggal Lahir:</strong> 26 Februari 2008</p>
+            <p><strong>Alamat:</strong> Cipameungpeuk link lio</p>
+            <p><strong>Hobi:</strong> rubik, catur, Coding, menggambar, main game, dll </p>
+            <p><strong>Cita-cita:</strong> Menjadi Programer yang Kreatif, aktif, dan inovatif</p>
+            </div>
+        <div>
+            <img 
+            src="febri.jpg" alt="Foto Biodata" 
+            class="foto-biodata" width="300px" >
+        </div>
+    </section>
+</header>
+<!-- pekenalan end -->
+ <!-- biodata start -->
+<main id="visi-misi" style="background: linear-gradient(90deg, var(--backgroung-1), var(--background-2));"> 
+    <p>
+        Saat belajar, saya merasa jatuh cinta pada dunia IT—karena di dalamnya, setiap masalah selalu punya solusi yang bisa diselesaikan dengan tenang dan baik.
+        Coding merupakan sebuah dunia logika, di mana satu kesalahan kecil saja bisa membuat seluruh dunia menjadi error. 
+        menurut saya, coding itu seperti dunia logika yang rapuh sekali dan adanya sebuah kesalahan dan seluruh sistem bisa terguncang.
+        Saya yakin setiap orang pasti memiliki kepribadian dan gaya bicara yang berbeda, dan dari perbedaan itulah kita bisa saling melengkapi.
+
+    </p>
+</main>
+<main  class="visi-misi p-20" style="background: url(minecraft-night.jpeg) center/cover no-repeat;"> 
+    <div class="visi">
+        <h2>Visi</h2>
+        <p>
+            ingin memajukan rasa semangan, kreatif, dan inovatif dalam bidang teknologi dan coding untuk mencetak generasi digital yang lebih unggul.
+            Mewujudkan dunia yang terhubung dan cerdas melalui inovasi teknologi informasi.
+            Menjadi penggerak utama dalam menciptakan masyarakat global yang inklusif, inovatif, dan berbasis teknologi.
+        </p>
+    </div>
+    <div class="misi">
+        <h2>Misi</h2>
+        <ul>
+            <li>Mendorong kreativitas dengan membuat aplikasi, website, atau game sederhana.</li>
+            <li>ingin memajukan rasa semangan, kreatif, dan inovatif dalam bidang teknologi dan coding untuk mencetak generasi digital yang lebih unggul.</li>
+            <li>Melatih pola pikir logis dan sistematis melalui latihan algoritma dan problem solving.</li>
+            <li>Menciptakan lingkungan belajar yang interaktif, kreatif, dan saling mendukung antar anggota.</li>
+            <li></li>
+        </ul>
+    </div>
+</main>
+<!-- visi misi end -->
+
+<!-- hobby start  -->
+<main id="hobby" class="hobby p-20" style="background: #171717;"> 
+    <h1>My hobby is</h1>
+    <div class="root">
+        <div class="card-hoby">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Rubiks_cube_by_keqs.jpg/1024px-Rubiks_cube_by_keqs.jpg" 
+                width="150px" height="150px" alt="rubik">
+            <h2>Rubik</h2>
+        </div>
+        <div class="card-hoby">
+            <img src="https://img.pikbest.com/origin/09/27/95/40PpIkbEsTs4H.png!sw800" 
+                width="150px" height="150px" alt="rubik">
+            <h2>catur</h2>
+        </div>
+        <div class="card-hoby">
+            <img src="https://imilkom.usu.ac.id/wp-content/uploads/2024/03/hacker-1024x683.webp" 
+                width="150px" height="150px" alt="rubik"
+                style="object-fit: cover; object-position: center;">
+            <h2>Ngoding</h2>
+        </div>
+        <div class="card-hoby">
+            <img src="hutao.jpg" 
+                width="150px" height="150px" alt="rubik"
+                style="object-fit: cover; object-position: center;">
+            <h2>Menggambar</h2>
+        </div>
+        <div class="card-hoby">
+            <img src="https://m.media-amazon.com/images/M/MV5BOTUwNzg2ZmUtYWZhMi00MWZiLTk1MTUtZWY3Yjk1N2UzMjg1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                width="150px" height="150px" alt="rubik"
+                style="object-fit: cover; object-position: top;">
+            <h2>Nonton Anime</h2>
+        </div>
+        <div class="card-hoby">
+            <img src="experimen.png" 
+                width="150px" height="150px" alt="rubik"
+                style="object-fit: cover; object-position: top;">
+            <h2>Eksperimen</h2>
+        </div>
+        <div class="card-hoby">
+            <img src="bedrock.png" 
+                width="150px" height="150px" alt="rubik"
+                style="object-fit: cover; object-position: top;">
+            <h2>Game</h2>
+        </div>
+    </div>
+</main>
+<!-- hobby end -->
+
+<!-- project start -->
+<main id="project" class="projek ">
+    <h2>Project</h2>
+    <div class="project">
+        <div class="card_project">
+            <img src="cek-server-mc.png" 
+            alt="cek server MC" width="300px" height="200px">
+            <h3>Cek Server MC</h3>
+            <P>website yang dirancang untuk mengecek status server pada game minecraft versi java dan bedrock</P>
+            <a href="https://cekup-servermc-co-id.vercel.app/">lihat website -></a>
+        </div>
+        <div class="card_project">
+            <img src="notepad-web.png" 
+            alt="cek server MC" width="300px" height="200px">
+            <h3>Notepad Web</h3>
+            <P>Notepad versi web yang dirancang untuk membuat catatan secara online</P>
+            <a href="https://github.com/NexdyMC/Notepad-Versi-Web">lihat website -></a>
+        </div>
+        <div class="card_project">
+            <img src="calcurator-rp.png" 
+            alt="cek server MC" width="300px" height="200px">
+            <h3>calculator Rp</h3>
+            <P>website yang dirancang untuk menghitung konversi mata uang rupiah ke mata uang lain</P>
+            <a href="https://calculator-rp-lake.vercel.app">lihat website -></a>
+        </div>
+        <div class="card_project">
+            <img src="bio-ig.png" 
+            alt="cek server MC" width="300px" height="200px">
+            <h3>Bio Instagram</h3>
+            <P>website yang dirancang untuk menampilkan informasi lengkap tentang profil Instagram seseorang</P>
+            <a href="https://bio-nexdy-info.netlify.app">lihat website -></a>
+        </div>
+    </div>
+</main>
+<style>
+    main {
+        background: linear-gradient( var(--backgroung-1), var(--background-2));
+        color: var(--color-d);
+        text-align: center;
+        padding: 20px
+    }
+    .project {
+        display: flex;              /* semua box berjejer horizontal */
+        gap: 10px;                  /* jarak antar box */
+        overflow-x: auto;           /* aktifkan scroll ke kanan */
+        padding: 10px;
+        scroll-behavior: smooth;    /* biar scroll halus */
+    }
+    
+    .card_project {
+        text-align: left;
+        flex: 0 0 auto; /* biar lebar tetap */
+        width: 300px;
+        border: 2px solid var(--border-a); 
+        border-radius: 10px;
+        overflow: hidden;
+        background: var(--background-2);
+        color: var(--color-d);
+        padding: 10px;
+        transition-duration: .2s;
+        
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: top;
+        }
+        a {
+            text-decoration: none;
+            color: var(--color-c);
+        }
+    }
+
+    .card_project:hover {
+        transform: scale(1.033);
+    }
+
+</style>
+<!-- project end -->
+<main  class="Kata-Kata" style="height: 50vh; display: flex; justify-content: center; align-items: center;"> 
+    <div class="kata_kata_bijak">
+        <h2 style="text-align: center;">Kata-Kata Bijak</h2>
+        <p style="text-align: center; max-width: 600px; margin: auto;">
+            "Jangan pernah menyerah kepada impianmu, karena impianmu merupakan bahan untuk meraih kesuksesan. Teruslah berusaha, belajar dari kegagalan, dan percayalah bahwa setiap langkah kecil membawa kita lebih dekat ke tujuan besar."
+        </p>
+    </div>
+</main>
+<footer>
+    <div class="link">
+        <a href="https://www.youtube.com"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.github.com"><i class="fa-brands fa-youtube"></i></a>
+
+    </div>
+    <h2>dibuat dengan penuh cinta Febri Pratama >w< </h2>
+    <p>&copy; 2024 Nexdy Project. All rights reserved.</p>
+</footer>
+
+<script>
+lucide.createIcons();
+// Ganti dengan gambar default-mu
+const defaultImg = "nexdy_transparant.png"; 
+
+// Cari semua <img> di halaman
+document.querySelectorAll("img").forEach(img => {
+    img.onerror = () => {
+    img.src = defaultImg;
+    };
+});
+</script>
+</body>
+</html>
+
+<!-- https://calculator-rp-lake.vercel.app -->
+ <!-- bio-nexdy-info.netlify.app -->
+  <!-- https://cekup-servermc-co-id.vercel.app/ -->
+   <!-- https://github.com/NexdyMC/Notepad-Versi-Web -->
